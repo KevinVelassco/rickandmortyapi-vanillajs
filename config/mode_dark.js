@@ -2,7 +2,8 @@ const d = document;
 
 const $header = d.querySelector(".header"),
             $nav = d.querySelector(".nav"),
-            $modeDark = d.querySelector(".modeDark"),
+            $aside = d.querySelector(".panel"),
+            $modeDarks = d.querySelectorAll(".modeDark"),
             $sections = d.querySelectorAll(".section"),
             $sectionTitles = d.querySelectorAll(".section__title"),
             $footer = d.querySelector(".footer");
@@ -11,7 +12,8 @@ export function modeDarkToggle(){
     const $containerCards = d.querySelector(".container-cards");
     $header.classList.toggle("header--modedark");
     $nav.classList.toggle("nav--modedark");
-    $modeDark.classList.toggle("active");
+    $aside.classList.toggle("panel--modedark");
+    $modeDarks.forEach(($modeDark) => $modeDark.classList.toggle("active"));
     $sections.forEach(($section) => $section.classList.toggle("section--modedark"));
     $sectionTitles.forEach(($sectionTitle) => $sectionTitle.classList.toggle("section__title--modedark"));
 
@@ -35,14 +37,16 @@ export function modeDark(){
     if(localStorage.getItem("dark-mode") === "true") {
         $header.classList.add("header--modedark");
         $nav.classList.add("nav--modedark");
-        $modeDark.classList.add("active");
+        $aside.classList.add("panel--modedark");
+        $modeDarks.forEach(($modeDark) => $modeDark.classList.add("active"));
         $sections.forEach(($section) => $section.classList.add("section--modedark"));
         $sectionTitles.forEach(($sectionTitle) => $sectionTitle.classList.add("section__title--modedark"));
         $footer.classList.add("footer--modedark");
     }else {
         $header.classList.remove("header--modedark");
         $nav.classList.remove("nav--modedark");
-        $modeDark.classList.remove("active");
+        $aside.classList.remove("panel--modedark");
+        $modeDarks.forEach(($modeDark) => $modeDark.classList.remove("active"));
         $sections.forEach(($section) => $section.classList.remove("section--modedark"));
         $sectionTitles.forEach(($sectionTitle) => $sectionTitle.classList.remove("section__title--modedark"));
         $footer.classList.remove("footer--modedark");
