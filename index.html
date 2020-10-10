@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RickandMorty</title>
+    <link rel="shortcut icon" href="asset/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container container--selection">
+        <nav class="nav">
+            <a class="nav__header" href="index.html">
+                <img src="asset/logo.png" alt="logo">
+            </a>
+            <ul class="nav__list">
+                <li class="nav_item"><a class="nav__link" href="#character">character</a></li>
+                <li class="nav_item"><a class="nav__link" href="#location">location</a></li>
+                <li class="nav_item"><a class="nav__link" href="#episode">episode</a></li>
+                <button class="modeDark">
+					<span class="modeDark__icon"><i class="fas fa-sun"></i></span>
+					<span class="modeDark__icon"><i class="fas fa-moon"></i></span>
+				</button>
+            </ul>
+        </nav>
+        <main class="main">
+            <header class="header">
+                <h1 class="header__title">Rick and Morty</h1>
+            </header>
+            <section class="section" id="character">
+                <header class="section__header">
+                    <h2 class="section__title">Character</h2>
+                </header>
+                <div id="infoCharacter" class="container-cards"></div>
+                <div class="pagination">
+                    <div class="pagination__container">
+                        <div class="pagination__previous">
+                            <span class="pagination__icon fas fa-arrow-circle-left"></span>
+                        </div>
+                        <div class="pagination__currentPage" id="page">
+                            1
+                        </div>
+                        <div class="pagination__next">
+                            <span class="pagination__icon fas fa-arrow-circle-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section" id="location">
+                <header class="section__header">
+                    <h2 class="section__title">
+                        Location<br><br><br><br>
+                        Very soon there will be content in this section
+                    </h2>
+                </header>
+            </section>
+            <section class="section" id="episode">
+                <header class="section__header">
+                    <h2 class="section__title">
+                        Episode<br><br><br><br>
+                        Very soon there will be content in this section
+                    </h2>
+                </header>
+            </section>
+        </main>
+        <footer class="footer">
+            <p><strong>Copyright (c) 2020</strong></p>
+        </footer>
+    </div>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
