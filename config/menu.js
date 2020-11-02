@@ -4,6 +4,7 @@ export default function menu() {
             e.target.matches(".menu__link")){
             document.querySelector(".panel").classList.toggle("is-active");
             document.querySelector(".panel-btn").classList.toggle("is-active");
+            document.querySelector("body").classList.toggle("is-active");
         }
     })
 }

@@ -1,15 +1,17 @@
 const d = document;
 
-const $header = d.querySelector(".header"),
-            $nav = d.querySelector(".nav"),
-            $aside = d.querySelector(".panel"),
-            $modeDarks = d.querySelectorAll(".modeDark"),
-            $sections = d.querySelectorAll(".section"),
-            $sectionTitles = d.querySelectorAll(".section__title"),
-            $footer = d.querySelector(".footer");
+const $body = d.body,
+    $header = d.querySelector(".header"),
+    $nav = d.querySelector(".nav"),
+    $aside = d.querySelector(".panel"),
+    $modeDarks = d.querySelectorAll(".modeDark"),
+    $sections = d.querySelectorAll(".section"),
+    $sectionTitles = d.querySelectorAll(".section__title"),
+    $footer = d.querySelector(".footer");
 
 export function modeDarkToggle(){
     const $containerCards = d.querySelector(".container-cards");
+    $body.classList.toggle("modedark");
     $header.classList.toggle("header--modedark");
     $nav.classList.toggle("nav--modedark");
     $aside.classList.toggle("panel--modedark");
@@ -35,6 +37,7 @@ export function modeDarkToggle(){
 
 export function modeDark(){
     if(localStorage.getItem("dark-mode") === "true") {
+        $body.classList.add("modedark");
         $header.classList.add("header--modedark");
         $nav.classList.add("nav--modedark");
         $aside.classList.add("panel--modedark");
@@ -43,6 +46,7 @@ export function modeDark(){
         $sectionTitles.forEach(($sectionTitle) => $sectionTitle.classList.add("section__title--modedark"));
         $footer.classList.add("footer--modedark");
     }else {
+        $body.classList.remove("modedark");
         $header.classList.remove("header--modedark");
         $nav.classList.remove("nav--modedark");
         $aside.classList.remove("panel--modedark");

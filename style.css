@@ -39,6 +39,14 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    background-color: var(--section-mode-claro);
+}
+
+body.modedark {
+    background-color: var(--section-mode-dark);
+}
+
 body::-webkit-scrollbar {
     width: 10px;
     background: #d5d5d5;
@@ -48,6 +56,10 @@ body::-webkit-scrollbar-thumb {
     background: #898989;
     border-radius: 10px;
     border-right: 1px solid #d5d5d5;
+}
+
+body.is-active {
+    overflow-y: hidden;
 }
 
 .container {
